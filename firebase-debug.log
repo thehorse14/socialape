@@ -1,0 +1,310 @@
+[debug] [2020-09-04T19:27:37.157Z] ----------------------------------------------------------------------
+[debug] [2020-09-04T19:27:37.160Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ooi.tiathan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-09-04T19:27:37.160Z] CLI Version:   7.4.0
+[debug] [2020-09-04T19:27:37.160Z] Platform:      win32
+[debug] [2020-09-04T19:27:37.160Z] Node Version:  v10.16.1
+[debug] [2020-09-04T19:27:37.161Z] Time:          Sat Sep 05 2020 03:27:37 GMT+0800 (Malaysia Time)
+[debug] [2020-09-04T19:27:37.161Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-09-04T19:27:37.169Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-04T19:27:37.170Z] > authorizing via signed-in user
+[debug] [2020-09-04T19:27:37.170Z] [iam] checking project social-5f7d3 for permissions ["firebase.projects.get"]
+[debug] [2020-09-04T19:27:37.171Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-09-04T19:27:37.171Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-09-04T19:27:37.286Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-04T19:27:37.293Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/social-5f7d3:testIamPermissions  
+
+[debug] [2020-09-04T19:27:38.356Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-04T19:27:38.357Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/social-5f7d3  
+ 
+[debug] [2020-09-04T19:27:38.673Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "D:\starburst stream\socialape-functions\functions" for Cloud Functions...
+[debug] [2020-09-04T19:27:39.386Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:27:39.386Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:27:39.390Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:27:39.394Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:27:39.394Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[api]: http function initialized (http://localhost:5000/social-5f7d3/us-central1/api).
+[debug] [2020-09-04T19:27:45.243Z] Accepted request POST /social-5f7d3/us-central1/api/user/image --> api
+[debug] [2020-09-04T19:27:45.622Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-09-04T19:27:45.623Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:27:45.627Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:27:45.630Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:27:45.631Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:27:46.613Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-09-04T19:27:46.613Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-09-04T19:27:46.614Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-09-04T19:27:46.620Z] {"socketPath":"\\\\?\\pipe\\D:\\starburst stream\\socialape-functions\\functions\\9284"}
+[debug] [2020-09-04T19:27:46.621Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\D:\\starburst stream\\socialape-functions\\functions\\9284"}
+[debug] [2020-09-04T19:27:46.635Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-09-04T19:27:46.711Z] [runtime-status] Ephemeral server survived. {}
+[info] >  D:\starburst stream\socialape-functions\functions\handlers\users.js:112
+[info] >          firebase.storage().bucket().upload(imageToBeUploaded.filepath, {
+[info] >                   ^
+[info] >  
+[info] >  TypeError: firebase.storage is not a function
+[info] >      at Busboy.busboy.on (D:\starburst stream\socialape-functions\functions\handlers\users.js:112:18)
+[info] >      at Busboy.emit (events.js:198:13)
+[info] >      at Busboy.emit (D:\starburst stream\socialape-functions\node_modules\busboy\lib\main.js:37:33)
+[info] >      at D:\starburst stream\socialape-functions\node_modules\busboy\lib\types\multipart.js:52:13
+[info] >      at process._tickCallback (internal/process/next_tick.js:61:11)
+[debug] [2020-09-04T19:27:52.841Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:27:54.270Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:27:54.270Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:27:54.275Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:27:54.278Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:27:54.279Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:28:01.275Z] File D:\starburst stream\socialape-functions\functions\util\admin.js changed, reloading triggers
+[debug] [2020-09-04T19:28:02.674Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:28:02.674Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:28:02.680Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:28:02.682Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:28:02.683Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  ReferenceError: buck is not defined
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\util\admin.js:7:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\handlers\screams.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:28:09.347Z] File D:\starburst stream\socialape-functions\functions\util\admin.js changed, reloading triggers
+[debug] [2020-09-04T19:28:10.765Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:28:10.765Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:28:10.771Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:28:10.776Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:28:10.777Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:28:17.660Z] Accepted request POST /social-5f7d3/us-central1/api/user/image --> api
+[debug] [2020-09-04T19:28:18.072Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-09-04T19:28:18.073Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:28:18.077Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:28:18.080Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:28:18.081Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:28:19.072Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-09-04T19:28:19.072Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-09-04T19:28:19.073Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-09-04T19:28:19.078Z] {"socketPath":"\\\\?\\pipe\\D:\\starburst stream\\socialape-functions\\functions\\20320"}
+[debug] [2020-09-04T19:28:19.080Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\D:\\starburst stream\\socialape-functions\\functions\\20320"}
+[debug] [2020-09-04T19:28:19.092Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-09-04T19:28:19.171Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-09-04T19:29:47.039Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:29:48.064Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:29:48.457Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:29:48.457Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:29:48.462Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:29:48.464Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:29:48.465Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:29:49.470Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:29:49.470Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:29:49.477Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:29:49.480Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:29:49.481Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:32:03.909Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:32:05.334Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:32:05.334Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:32:05.339Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:32:05.342Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:32:05.344Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:32:17.323Z] Accepted request POST /social-5f7d3/us-central1/api/user/image --> api
+[debug] [2020-09-04T19:32:17.758Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-09-04T19:32:17.766Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:32:17.766Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:32:17.766Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:32:17.767Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:32:19.040Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-09-04T19:32:19.040Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-09-04T19:32:19.040Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-09-04T19:32:19.049Z] {"socketPath":"\\\\?\\pipe\\D:\\starburst stream\\socialape-functions\\functions\\6740"}
+[debug] [2020-09-04T19:32:19.050Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\D:\\starburst stream\\socialape-functions\\functions\\6740"}
+[debug] [2020-09-04T19:32:19.072Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-09-04T19:32:20.450Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~3s
+[debug] [2020-09-04T19:33:34.099Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:33:35.478Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:33:35.478Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:33:35.484Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:33:35.486Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:33:35.487Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:105
+        const imageExtension = filename.split(".")[filename.split('.'). - 1];
+                                                                        ^
+
+SyntaxError: Unexpected token -
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:33:37.176Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:33:38.554Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:33:38.554Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:33:38.558Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:33:38.561Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:33:38.562Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:31.101Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:34:32.546Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:34:32.547Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:34:32.551Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:34:32.554Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:32.555Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:33.049Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:105
+        if(mimetype !==)
+                       ^
+
+SyntaxError: Unexpected token )
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:34:34.547Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:34:34.547Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:34:34.553Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:34:34.557Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:34.559Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:105
+        if(mimetype !==)
+                       ^
+
+SyntaxError: Unexpected token )
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:34:37.068Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:34:38.487Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:34:38.487Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:34:38.494Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:34:38.496Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:38.497Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:106
+        const imageExtension = filename.split(".")[filename.split('.').length - 1];
+        ^^^^^
+
+SyntaxError: Unexpected token const
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:34:43.883Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:34:45.323Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:34:45.323Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:34:45.328Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:34:45.330Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:45.331Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:105
+        if(mimetype !== "image/jpeg" && )
+                                        ^
+
+SyntaxError: Unexpected token )
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:34:52.231Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:34:53.622Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:34:53.622Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:34:53.629Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:34:53.631Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:53.632Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:106
+        const imageExtension = filename.split(".")[filename.split('.').length - 1];
+        ^^^^^
+
+SyntaxError: Unexpected token const
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:34:54.933Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:34:56.343Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:34:56.343Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:34:56.349Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:34:56.353Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:34:56.355Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  D:\starburst stream\socialape-functions\functions\handlers\users.js:106
+        const imageExtension = filename.split(".")[filename.split('.').length - 1];
+        ^^^^^
+
+SyntaxError: Unexpected token const
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (D:\starburst stream\socialape-functions\functions\index.js:6:40)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-09-04T19:35:02.294Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:35:03.709Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:35:03.709Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:35:03.714Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:35:03.717Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:35:03.718Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:35:21.657Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:35:23.091Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:35:23.091Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:35:23.099Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:35:23.103Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:35:23.104Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:35:28.283Z] File D:\starburst stream\socialape-functions\functions\handlers\users.js changed, reloading triggers
+[debug] [2020-09-04T19:35:29.684Z] [runtime-status] Functions runtime initialized. {"cwd":"D:\\starburst stream\\socialape-functions\\functions","node_version":"10.16.1"}
+[debug] [2020-09-04T19:35:29.684Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-04T19:35:29.690Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-04T19:35:29.693Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-04T19:35:29.694Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"D:\\starburst stream\\socialape-functions\\functions\\node_modules\\firebase-functions\\lib\\index.js"}

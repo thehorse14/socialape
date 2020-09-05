@@ -1,0 +1,36 @@
+@serviceUrl=http://localhost:5000/social-5f7d3/us-central1/api
+@AuthorizationToken=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMDM2YWYyZDgzOWE4NDJhZjQzY2VjZmJiZDU4YWYxYTc1OGVlYTIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc29jaWFsLTVmN2QzIiwiYXVkIjoic29jaWFsLTVmN2QzIiwiYXV0aF90aW1lIjoxNTk5MjQ0OTIxLCJ1c2VyX2lkIjoiTTZ2OUVNRjZMaGJqWTJCM1pCNERPSkV2cEhQMiIsInN1YiI6Ik02djlFTUY2TGhialkyQjNaQjRET0pFdnBIUDIiLCJpYXQiOjE1OTkyNDQ5MjEsImV4cCI6MTU5OTI0ODUyMSwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ0ZXN0QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.PMMCPtCqa8WRL_ciPzcf7sRCAW7kBN2sxf0LITII2uh84a2JY_r1JlU1i99adPdxxKd1kVxOvn4M4qf8_fpF1bH_mervHpMsc_uZV8dvP3cq1JYN2mPZJoYZvP0ECPgXza5vjBp4-LW4PXATooM81Tt32tLGQvYCuS-VFoNsB2F6wkv5KHLzIp57ArGpe9CiwvSlD8iqOCit8iTyRX3KTWTDnq_QL9v3iib1d_cQJdjTzyrLFtpRrzDIxXdEt2-IzdbCk2VfKGvymVLORfZK36-NFi65DSs6TBPISaWV-EyPwO86ZasxLDFiY-O1gZF5z5X_Wy5F-n3TYRQh4gYLjg
+### Get all the screams
+GET {{serviceUrl}}/screams
+
+
+### Post scream
+POST {{serviceUrl}}/scream
+Content-Type: application/json
+Authorization: {{AuthorizationToken}}
+
+{
+    "body": "pool",
+    "userHandle": "Joke"
+}
+
+### sign up
+
+POST {{serviceUrl}}/signup
+Content-Type: application/json
+
+{
+    "email": "tester2@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "handle": "user13"
+}
+
+### login
+POST {{serviceUrl}}/login
+Content-Type: application/json
+
+{
+    "email": "tester2@gmail.com",
+    "password": "123456"
+}
