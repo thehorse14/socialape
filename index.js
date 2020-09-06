@@ -2,7 +2,7 @@ const functions = require("firebase-functions");
 
 const app = require("express")();
 
-const { getAllScreams, postOneScream, getScream, commentOnScream, likeScream, unlikeScream } = require('./handlers/screams');
+const { getAllScreams, postOneScream, getScream, commentOnScream, likeScream, unlikeScream, deleteScream } = require('./handlers/screams');
 const { signUp, login, uploadImage, addUserDetails, getAuthenticatedUser } = require("./handlers/users");
 
 const FBAuth = require("./util/fbAuth");
@@ -15,12 +15,10 @@ const FBAuth = require("./util/fbAuth");
 app.get("/screams", getAllScreams);
 app.post("/scream", FBAuth, postOneScream);
 app.get("/scream/:screamId", getScream);
+app.delete("/scream/:screamId", FBAuth, deleteScream);
 
-//TODO delete a scream
 app.get("/scream/:screamId/like", FBAuth, likeScream);
 app.get("/scream/:screamId/unlike", FBAuth, unlikeScream);
-//TODO like a scream
-//TODO unlike a scream
 app.post("/scream/:screamId/comment", FBAuth, commentOnScream);
 
 //Users routes
