@@ -1,8 +1,12 @@
 @serviceUrl=http://localhost:5000/social-5f7d3/us-central1/api
 @AuthorizationToken=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ5YWQ5YmM1ZThlNDQ3OTNhMjEwOWI1NmUzNjFhMjNiNDE4ODA4NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc29jaWFsLTVmN2QzIiwiYXVkIjoic29jaWFsLTVmN2QzIiwiYXV0aF90aW1lIjoxNTk5MzY4NDIxLCJ1c2VyX2lkIjoiQlJWQXJRdjJkb2dNR0loZWxLV0VxeVlJRnlRMiIsInN1YiI6IkJSVkFyUXYyZG9nTUdJaGVsS1dFcXlZSUZ5UTIiLCJpYXQiOjE1OTkzNjg0MjEsImV4cCI6MTU5OTM3MjAyMSwiZW1haWwiOiJ0ZXN0ZXIyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ0ZXN0ZXIyQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.dQFDcVWGSrca5mrE2uYmph8UhFnBRWLMbPLtI1Hg852ALypn4ZvND_1whAqmB8Qw3NWy5sVhK_DnOOtHR2dG7Uj3YXDw7-cLqWVR4rLitg_VsglVl8h66IMtDnVVyYUpQ3USzKj1b5flNPYDL6jIH7-KBZV1qYfYQIMErVMMiXv0qxtKBQVJIhdJM6kowhZeVT3ZGXNwj-WxeU8rSkQ1qjfzjEcqThysVV10BuMz9KraE-ec8Ndc0rkGxnVm8BF_sTBQPVcdoD6PrXYysOAvc95wCbQjCZz0EaUotZyDALwJ066gGS_mN1EiVvLghCNL5WgRHpFJd1TWX-dX68KWcA
+@screamId=5bU4gvT79F2huRoWnqX3
+
 ### Get all the screams
 GET {{serviceUrl}}/screams
 
+### Get scream
+GET {{serviceUrl}}/scream/{{screamId}}
 
 ### Post scream
 POST {{serviceUrl}}/scream
@@ -15,7 +19,6 @@ Authorization: {{AuthorizationToken}}
 }
 
 ### sign up
-
 POST {{serviceUrl}}/signup
 Content-Type: application/json
 
